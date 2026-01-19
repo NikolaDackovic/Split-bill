@@ -1,110 +1,94 @@
-🍽️ Eat-N-Split (React Practice Project)
+### 🍽️ Eat-N-Split (React Practice Project)
 
-link: https://friendly-longma-758736.netlify.app/
+🔗 **Live demo:**  
+https://friendly-longma-758736.netlify.app/
 
-This project is a small React application built to practice core React concepts such as state management, props, component composition, and lifting state up.
+### About the Project
 
-The app allows users to manage a list of friends and split bills with them, keeping track of who owes whom money.
+**Eat-N-Split** is a small React application built to practice core React concepts such as **state management, props, component composition, and lifting state up**.
 
-🚀 What I Learned From This Project
-1️⃣ Thinking in Components
+The app allows users to manage a list of friends and split bills with them, keeping track of **who owes whom money**.
 
-I learned how to break a UI into small, reusable components, such as:
+### What I Learned From This Project
 
-App
+### Thinking in Components
 
-FriendList
+I learned how to break the UI into small, reusable components:
 
-Friend
+- `App`
+- `FriendList`
+- `Friend`
+- `FormAddFriend`
+- `FormSplitBill`
+- `Button`
 
-FormAddFriend
+Each component has a **single responsibility**, which makes the code easier to read, maintain, and scale.
 
-FormSplitBill
+### useState for State Management
 
-Button
+I practiced using `useState` to manage different types of state:
 
-Each component has a single responsibility, which makes the code easier to read and maintain.
+- Arrays (friends list)
+- Booleans (showAddFriend)
+- Objects (selectedFriend)
+- Form inputs (bill, paidByUser, whoIsPaying)
 
-2️⃣ useState for State Management
+I also learned **where state should live**, depending on which components need access to it.
 
-I practiced using useState to manage different types of state:
+### Lifting State Up
 
-Arrays (friends)
+One of the most important lessons in this project was **lifting state up**:
 
-Booleans (showAddFriend)
+- The `friends` state lives in the `App` component
+- Child components do not change state directly
+- Child components communicate with the parent via **callback props**
 
-Objects (selectedFriend)
+This helped me clearly understand **one-way data flow** in React.
 
-Form inputs (bill, paidByUser, whoIsPaying)
-
-I also learned where state should live, depending on which components need access to it.
-
-3️⃣ Lifting State Up
-
-One of the most important lessons in this project was lifting state up:
-
-The friends state lives in App
-
-Child components do not change state directly
-
-Child components notify the parent via callback props
-
-This helped me understand one-way data flow in React.
-
-4️⃣ Passing Props & Callback Functions
+### Passing Props & Callback Functions
 
 I learned how to:
 
-Pass data down using props
-
-Pass functions down to handle events
-
-Let child components update parent state indirectly
+- Pass data down using props
+- Pass functions down to handle events
+- Let child components update parent state indirectly
 
 Examples include:
 
-onAddFriend
+- `onAddFriend`
+- `onSelection`
+- `onSplitBill`
 
-onSelection
+### The `children` Prop
 
-onSplitBill
+I used the `children` prop to create a **reusable Button component**, allowing flexible button content without duplicating logic.
 
-5️⃣ The children Prop
-
-I used the children prop to create a reusable Button component, allowing flexible button content without rewriting logic.
-
-6️⃣ Conditional Rendering
+### Conditional Rendering
 
 I practiced conditional rendering to:
 
-Show/hide forms
+- Show and hide forms
+- Render components based on state
+- Dynamically change button text
 
-Render components based on state
+This reinforced how React UI updates automatically when state changes.
 
-Dynamically change button text
-
-This reinforced how React reacts to state changes.
-
-7️⃣ Updating State Immutably
+### Updating State Immutably
 
 I learned how to:
 
-Update arrays using map and spread syntax
+- Update arrays using `map` and spread syntax
+- Use functional state updates
+- Avoid mutating state directly
 
-Use functional state updates
+This is essential for **predictable and bug-free React behavior**.
 
-Avoid mutating state directly
+### Key Takeaway
 
-This is essential for predictable React behavior.
+This project helped me transition from **basic React concepts** to understanding how a **real-world React application** is structured, how components communicate, and how shared state is managed.
 
-🧠 Key Takeaway
+### Technologies Used
 
-This project helped me transition from basic React concepts to understanding how a real-world React application is structured, how components communicate, and how shared state is managed.
-
-🛠️ Technologies Used
-
-React
-
-JavaScript (ES6+)
-
-CSS
+- React
+- JavaScript (ES6+)
+- CSS
